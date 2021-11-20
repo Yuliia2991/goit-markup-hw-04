@@ -192,7 +192,7 @@ body {
   content: '';
   height: 120px;
   background-color: var(--third-background-color);
-  background-size: contain;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
 
