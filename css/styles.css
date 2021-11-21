@@ -9,6 +9,7 @@
   --main-background-color: #ffffff;
   --second-background-color: #2f303a;
   --third-background-color: #f5f4fa;
+  --icons-color: #afb1b8;
 }
 .visually-hidden {
   position: absolute;
@@ -67,6 +68,7 @@ body {
 .box {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 /* -------------------Стили хедера--------------- */
@@ -100,12 +102,17 @@ body {
   font-weight: 500;
   letter-spacing: 0.02em;
 }
+.icon-contacts {
+  margin-right: 10px;
+  fill: currentColor;
+}
 .navigation-link:hover,
 .navigation-link:focus,
 .contacts-link:hover,
 .contacts-link:focus {
   color: var(--main-accent-color);
 }
+
 /* -------------Стили логотипа----------------- */
 .navigation > .logo {
   margin-right: 93px;
@@ -166,13 +173,13 @@ body {
   letter-spacing: 0.06em;
   color: var(--second-accent-color);
   background-color: var(--main-accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
-/* ---------------------Преиумцщества-------------------- */
+/* ---------------------Преимущества-------------------- */
 .advantage-section {
   padding-bottom: 0;
 }
@@ -186,27 +193,19 @@ body {
 .advantage-item {
   width: 270px;
 }
-.advantage-item::before {
-  display: block;
-  margin-bottom: 30px;
-  content: '';
-  height: 120px;
-  background-color: var(--third-background-color);
-  background-size: 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  outline: 3px solid red;
-}
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
 .advantage-item:not(:last-child) {
   margin-right: 30px;
 }
 .advantage-text {
   line-height: 1.71;
   color: var(--text-color);
+}
+.icon-box {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 30px;
+  border-radius: 4px;
+  background-color: var(--third-background-color);
 }
 /* ---------------------Чем мы занимаемся------------------ */
 
@@ -251,6 +250,66 @@ body {
   font-size: 16px;
   line-height: 1.19;
   color: var(--text-color);
+  margin-bottom: 16px;
+}
+.social-item {
+  width: 44px;
+  height: 44px;
+}
+.social-item + .social-item {
+  margin-left: 10px;
+}
+.social-link {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--main-background-color);
+  border-radius: 50%;
+  color: var(--icons-color);
+}
+.icon-social {
+  fill: currentColor;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--main-accent-color);
+  color: var(--second-accent-color);
+}
+
+/*------------------------Стили для логотипов компаний----------------- */
+
+.logos-title {
+  text-align: center;
+  margin-bottom: 50px;
+
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+.logos-item {
+  width: 170px;
+  height: 92px;
+}
+
+.logos-item + .logos-item {
+  margin-left: 30px;
+}
+.logos-link {
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--main-background-color);
+  color: var(--icons-color);
+  border: 1px solid var(--icons-color);
+  border-radius: 4px;
+}
+.icon-logos {
+  fill: currentColor;
+}
+.logos-link:hover,
+.logos-link:focus {
+  color: var(--main-accent-color);
+  border-color: var(--accent-color);
 }
 /* --------------Стили футера-------------- */
 .footer {
@@ -258,9 +317,16 @@ body {
   padding-bottom: 60px;
   background-color: var(--second-background-color);
 }
+.footer-icon {
+  justify-content: flex-start;
+  align-items: baseline;
+}
 .footer-content > .logo {
   display: block;
   margin-bottom: 20px;
+}
+.footer-content {
+  margin-right: 70px;
 }
 .address {
   font-style: normal;
@@ -276,13 +342,22 @@ body {
 .address-contacts {
   color: var(--footer-contacts-color);
 }
-
 .address .link:hover,
 .address .link:focus {
   color: var(--main-accent-color);
 }
+.label {
+  margin-bottom: 20px;
 
-/* ------------------------Стили для portfolio.html */
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--second-accent-color);
+}
+.footer-social-link {
+  color: var(--second-accent-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+/* ------------------------Стили для portfolio.html-------------------  */
 .filters {
   justify-content: center;
   margin-bottom: 50px;
@@ -307,6 +382,8 @@ body {
 .filters-button:focus {
   color: var(--second-accent-color);
   background-color: var(--main-accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .projects {
   flex-wrap: wrap;
@@ -318,6 +395,18 @@ body {
   margin-right: 30px;
   margin-bottom: 30px;
 }
+.projects-link:hover,
+.projects-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+/* .projects-item:hover,
+.projects-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+} */
+
 .projects-content {
   padding: 20px 24px;
   border: 1px solid #eeeeee;
